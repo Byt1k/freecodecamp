@@ -1,0 +1,6 @@
+function confirmEnding(str, target) {
+  str = str.split('');
+  return str.slice(-target.length).join('') == target ? true : false;
+}
+
+confirmEnding("Bastian", "n");
