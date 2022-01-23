@@ -1,0 +1,8 @@
+// Only change code below this line
+function urlSlug(title) {
+  title = title.toLowerCase().trim();
+  title = title.split(/\W+/);
+  return title.join('-');
+}
+// Only change code above this line
+console.log(urlSlug(" Winter Is  Coming"));
