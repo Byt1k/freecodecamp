@@ -1,0 +1,17 @@
+let glideMixin = obj => {
+  obj.glide = function () {console.log('I slide');};
+}
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+glideMixin(bird);
+glideMixin(boat);
+
+// Only change code below this line
