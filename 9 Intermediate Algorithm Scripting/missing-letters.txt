@@ -1,0 +1,11 @@
+function fearNotLetter(str) {
+  let alpha = 'abcdefghijklmnopqrstuvwxyz';
+  alpha = alpha.slice(alpha.indexOf(str[0]));
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== alpha[i]) {
+      return alpha[i];
+    }
+  }
+}
+
+fearNotLetter("stvwx");

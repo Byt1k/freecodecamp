@@ -1,0 +1,13 @@
+function smallestCommons(arr) {
+  arr.sort((a, b) => a - b);
+  let numb = 1;
+  for (let i = arr[0]; i <= arr[1]; i++) {
+    while (numb % i != 0) {
+      numb++;
+      i = arr[0];
+    }
+  }
+  return numb;
+}
+
+console.log(smallestCommons([1,5]));

@@ -1,0 +1,18 @@
+function getIndex(arr, func) {
+  for (let i = 0; i < arr.length; i++) {
+    if (func(arr[i])) {
+      return arr.indexOf(arr[i]);
+    }
+  }
+}
+
+function dropElements(arr, func) {
+  let result = [];
+  let index = getIndex(arr, func);
+  if (index != undefined) {
+    result = arr.splice(index);
+  }
+  return result;
+}
+
+console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}));

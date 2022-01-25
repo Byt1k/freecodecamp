@@ -1,0 +1,21 @@
+function pairElement(str) {
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    let item = str[i];
+    if (item == 'A') {
+      result.push([item, 'T']);
+    }
+    else if (item == 'T') {
+      result.push([item, 'A']);
+    }
+    else if (item == 'C') {
+      result.push([item, 'G']);
+    }
+    else if (item == 'G') {
+      result.push([item, 'C']);
+    }
+  }
+  return result;
+}
+
+console.log(pairElement("GCG"));
